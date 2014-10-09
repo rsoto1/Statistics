@@ -1,4 +1,4 @@
-require "statistics"
+require "statistics/version"
 
 module Statistics
 
@@ -22,9 +22,9 @@ module Statistics
 end
 
 #Count the lines of Ruby code in your app
-find . -iname "*.rb" -type f -exec cat {} \; | wc -l
+# find . -iname "*.rb" -type f -exec cat {} \; | wc -l
 
-#Sort the Ruby files in your project by LOC
-find . -iname "*.rb" -type f -exec wc -l {} \; | sort -rn
+# #Sort the Ruby files in your project by LOC
+# find . -iname "*.rb" -type f -exec wc -l {} \; | sort -rn
 
 
