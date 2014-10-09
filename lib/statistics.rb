@@ -19,7 +19,7 @@ module Statistics
       get_raw(HAS_MANY_SEARCH).split("\n")
     end
   end
-end
+
 
 #Count the lines of Ruby code in your app
 # find . -iname "*.rb" -type f -exec cat {} \; | wc -l
