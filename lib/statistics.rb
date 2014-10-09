@@ -3,10 +3,8 @@ require "statistics/version"
 module Statistics
 
     #Sort the Ruby files in your project by number of has_many
-    PIPE_MINUS_COVERAGE = '| grep -v "coverage"'
-    CURRENT_FILE = File.basename(__FILE__)
-    PIPE_MINUS_CURRENT_FILE = "| grep -v \"#{CURRENT_FILE}\""
-    HAS_MANY_SEARCH = "ack \" has_many \" -c | awk -F \":\" '{print $2,$1}' | grep -v \"0\" #{PIPE_MINUS_COVERAGE} #{PIPE_MINUS_CURRENT_FILE} | sort -rn"
+ 
+    HAS_MANY_SEARCH = "ack \" has_many \" -c | awk -F \":\" '{print $2,$1}' | grep -v \"0\" sort -rn"
 
     # Use this if you are brave
     # HAS_MANY_SEARCH_WITH_FILE = File.expand_path('../../../bin/has_many.sh', __FILE__)
