@@ -1,4 +1,4 @@
-require "statistics/version"
+require "statistics"
 
 module Statistics
 
