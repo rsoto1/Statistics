@@ -9,7 +9,7 @@ module Statistics
     HAS_MANY_SEARCH = "ack \" has_many \" -c | awk -F \":\" '{print $2,$1}' | grep -v \"0\" #{PIPE_MINUS_COVERAGE} #{PIPE_MINUS_CURRENT_FILE} | sort -rn"
 
     # Use this if you are brave
-    HAS_MANY_SEARCH_WITH_FILE = File.expand_path('../../../bin/has_many.sh', __FILE__)
+    # HAS_MANY_SEARCH_WITH_FILE = File.expand_path('../../../bin/has_many.sh', __FILE__)
 
     def self.get_raw(command)
       `#{command}`
